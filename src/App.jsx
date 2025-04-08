@@ -1,5 +1,5 @@
 import Banner from "./components/banner"
-import FooterSection from "./components/footer"
+// import FooterSection from "./components/footer"
 import PopularGame from "./components/PopularGame"
 import ReferSection from "./components/refer"
 import SocialMedia from "./components/SocialMedia"
@@ -15,7 +15,7 @@ function App() {
         <PopularGame />
         <SubscribeSection />
         <SocialMedia />
-        <FooterSection />
+        {/* <FooterSection /> */}
       </div>
 
     </>

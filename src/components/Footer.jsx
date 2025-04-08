@@ -8,7 +8,7 @@ import Discord from '../assets/images/icons/discord.svg'
 import Twitter from '../assets/images/icons/twitter.svg'
 import Instagram from '../assets/images/icons/instagram.svg'
 import Youtube from '../assets/images/icons/youtube.svg'
-export default function Footer() {
+export default function FooterSection() {
     return (
         <section className='footer'>
             <footer>

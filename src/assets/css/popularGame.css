@@ -1,0 +1,33 @@
+.popularGame_section {
+  position: relative;
+  max-width: 1556px;
+  margin: 0 auto;
+  padding: 100px 0 100px 0;
+
+  .main-head {
+    margin-bottom: 44px;
+  }
+  .heading {
+    color: var(--white);
+    text-shadow: var(--text-shadow-1);
+    margin: 0;
+    position: relative;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: 40%;
+      height: 0;
+      border-top: 1px solid var(--color-green-1);
+      transform: translateY(-50%);
+    }
+    &::after {
+      left: 0;
+    }
+    &::before {
+      right: 0;
+    }
+  }
+}

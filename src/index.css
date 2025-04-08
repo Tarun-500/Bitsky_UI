@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Condiment&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +11,17 @@
 
 .montserrat {
   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.condiment {
+  font-family: "Condiment", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ceviche {
+  font-family: "Ceviche One", system-ui;
   font-optical-sizing: auto;
 }
 
@@ -20,7 +34,9 @@
   --color-pink-light: #aa77a8;
   --color-op-gray: #ffffff4d;
   --color-pink: #ff00f9;
+  --primary-color: #ff00ee;
   --color-green: #004a42;
+  --color-green-1: #494949;
   --color-skyblue-1: #039be5;
   --color-skyblue-2: #03a9f4;
   --color-purple: #5046af;
@@ -45,15 +61,28 @@
   --bg-dark: #0e0e0e;
 
   --font-montserrat: "Montserrat", sans-serif;
-  --font-lexend: "lexend", sans-serif;
+  --font-lexend: "Lexend", sans-serif;
+  --font-ceviche: "Ceviche One", sans-serif;
+  --font-condiment: "Condiment", cursive;
 
   --fw-400: 400;
   --fw-600: 600;
+  --fw-700: 700;
 
   --fs-14: 14px;
   --fs-18: 18px;
   --fs-16: 16px;
   --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-36: 36px;
+  --fs-53: 53px;
+  --fs-60: 60px;
+
+  --rounded-24: 24px;
+
+  --z-index-99: 99;
+
+  --text-shadow-1 : 8px 4px 12px #00000075;
 }
 
 a {
@@ -80,6 +109,11 @@ a {
   letter-spacing: -0.006em;
 }
 
+.para-4 {
+  font-size: var(--fs-24);
+  line-height: 1;
+}
+
 .head-2 {
   font-family: var(--font-lexend);
   font-weight: var(--fw-600);
@@ -88,6 +122,54 @@ a {
   letter-spacing: -0.017em;
 }
 
+.head-3 {
+  font-family: var(--font-ceviche);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-36);
+  line-height: 86%;
+  letter-spacing: 0%;
+}
+
+.head-4 {
+  font-family: var(--font-montserrat);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-36);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.head-5 {
+  font-family: var(--font-ceviche);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-53);
+  line-height:.9; 
+}
+
 body {
   background: var(--bg-dark) !important;
+}
+
+.bg-banner {
+  background-image: url("./assets/images/bg-banner.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.green-mask-button {
+  --off-market-play-btn-mask-image: url("./assets/images/button-mask-green.svg");
+  background: url("./assets/images/button-mask-green.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  outline: 0;
+
+  font-family: var(--font-ceviche);
+  font-weight: var(--fw-400);
+  line-height: 1;
+  color: var(--color-green);
 }

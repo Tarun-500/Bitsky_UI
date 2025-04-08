@@ -2,17 +2,18 @@
   width: 100%;
   min-height: 484px;
   clip-path: polygon(0% 18.8%, 100.1% 0%, 100% 100%, 0% 100%);
-  background: radial-gradient(
-    54.48% 191.16% at 50% 50%,
-    rgba(244, 110, 241, 0.19) 0%,
-    rgba(244, 110, 241, 0.08) 100%
-  );
-  backdrop-filter: blur(32px);
+  background: radial-gradient(54.48% 191.16% at 50% 50%, rgba(244, 110, 241, 0.19) 0%, rgba(244, 110, 241, 0.08) 100%);
+  backdrop-filter: blur(32px); 
+  background-color: var(--bg-dark);
+  /* background-image: url("../images/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat; */
+
 }
 
 footer {
   max-width: 1556px;
-  margin: 0 auto; 
+  margin: 0 auto;
   padding: 130px 30px 30px 30px;
   .content {
     padding-top: 24px;

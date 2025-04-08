@@ -1,11 +1,23 @@
+import Banner from "./components/banner"
 import Footer from "./components/footer"
+import PopularGame from "./components/PopularGame"
+import ReferSection from "./components/refer"
+import SocialMedia from "./components/SocialMedia"
+import SubscribeSection from "./components/SubscribeSection"
 
 function App() {
 
   return (
     <>
-    <div className="py-5 my-5 d-flex align-items-center justify-content-center"> <h3>Win Big In Bitsky</h3></div>
-     <Footer />
+      <Banner />
+      <div className="bg-banner">
+        <ReferSection />
+        <PopularGame />
+        <SubscribeSection />
+        <SocialMedia />
+        <Footer />
+      </div>
+
     </>
   )
 }

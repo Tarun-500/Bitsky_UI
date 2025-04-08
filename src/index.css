@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.lexend {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+}
+:root {
+  --white: #ffffff;
+  --color-pink-light: #aa77a8;
+  --color-op-gray: #ffffff4d;
+  --color-pink: #ff00f9;
+  --color-green: #004a42;
+  --color-skyblue-1: #039be5;
+  --color-skyblue-2: #03a9f4;
+  --color-purple: #5046af;
+  --color-maroon: #654900;
+  --liner-bg-1: linear-gradient(180deg, #6ef4c4 0%, #009289 92.59%);
+  --radial-bg: radial-gradient(
+    54.48% 191.16% at 50% 50%,
+    rgba(244, 110, 241, 0.19) 0%,
+    rgba(244, 110, 241, 0.08) 100%
+  );
+
+  --liner-bg-2: linear-gradient(
+    135deg,
+    #fae100 14.64%,
+    #fcb720 25.25%,
+    #ff7950 35.86%,
+    #ff1c74 50%,
+    #6c1cd1 85.36%
+  );
+  --color-red: #ff0000;
+  --color-grey: #ffffff33;
+  --bg-dark: #0e0e0e;
+
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-lexend: "lexend", sans-serif;
+
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --fs-14: 14px;
+  --fs-18: 18px;
+  --fs-16: 16px;
+  --fs-20: 20px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.para {
+  font-family: var(--font-montserrat);
+  font-weight: var(--fw-600);
+}
+.para-1 {
+  font-size: var(--fs-18);
+  line-height: 1.11;
+  letter-spacing: 0em;
+}
+.para-2 {
+  font-size: var(--fs-16);
+  line-height: 1.25;
+  letter-spacing: -0.006em;
+}
+.para-3 {
+  font-size: var(--fs-14);
+  line-height: 1.4;
+  letter-spacing: -0.006em;
+}
+
+.head-2 {
+  font-family: var(--font-lexend);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-20);
+  line-height: 1.4;
+  letter-spacing: -0.017em;
+}
+
+body {
+  background: var(--bg-dark) !important;
+}

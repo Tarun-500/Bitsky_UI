@@ -67,6 +67,9 @@
     .input {
       position: relative;
       margin-bottom: 24px;
+      &.error input {
+        border-color: var(--color-red) !important;
+      }
     }
     .email-icon {
       position: absolute;
@@ -93,6 +96,12 @@
       }
     }
 
+    .error-message {
+      position: absolute;
+      font-size: var(--fs-10);
+      top: 100%;
+      color: var(--color-red);
+    }
     .btn-pink-wrapper {
       .btn-pink {
         max-width: 160px;
@@ -133,7 +142,7 @@
         height: 38px;
         font-size: var(--fs-14);
       }
-      h2{
+      h2 {
         font-size: var(--fs-34);
       }
       p {
@@ -204,7 +213,7 @@
         margin-bottom: 10px;
       }
       input {
-        max-width: 260px; 
+        max-width: 260px;
         font-size: var(--fs-12);
       }
     }

@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Banner />
-      <div className="bg-banner">
+      <div className="bg-banner" id="next-section">
         <ReferSection />
         <PopularGame />
         <SubscribeSection />

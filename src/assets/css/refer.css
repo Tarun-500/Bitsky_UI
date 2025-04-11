@@ -1,37 +1,344 @@
 .refer {
-  max-width: 1556px;
+  max-width: 1560px;
   margin: 0 auto;
-  .mask {
-    width: 100%;
-    height: 400px;  
+  z-index: 1;
+  position: relative;
+  padding: 180px 0 0 0;
 
-    background-color: var(--bg-dark);
+  .row {
+    row-gap: 100px;
+  }
+  .gamer-section {
     position: relative;
+    > img {
+      top: -10%;
+      right: 0;
+      position: absolute;
+      z-index: 1;
+      width: 50%;
+    }
+  }
+  .gamer-box {
+    position: relative;
+    mask-image: url("../images/gamer-layer.png");
+    -webkit-mask-image: url("../images/gamer-layer.png");
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-    -webkit-mask-position: center;
-    mask-repeat: no-repeat; 
-    mask-size: cover;
-    mask-position: center; 
-    .masked {
+    max-width: 100%;
+    width: 100%;
+    .green-mask-button {
+      text-align: center;
+      width: 70%;
+      aspect-ratio: 439/109;
+      font-size: 44px;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0%, -50%);
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      position: relative;
+      z-index: 9;
     }
-    &.mask-1 {
-      mask-image: url("../images/refer-mask-1.webp");
-      -webkit-mask-image: url("../images/refer-mask-1.webp");
+
+    .gamer {
+      position: absolute;
+      right: 0;
+      top: -10%;
     }
-    &.mask-2 {
-      mask-image: url("../images/refer-mask-2.webp");
-      -webkit-mask-image: url("../images/refer-mask-2.webp");
+  }
+  .boxes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    > img {
+      width: 100%;
+      height: auto;
     }
-    &.mask-3 {
-      mask-image: url("../images/play-off-mask.webp");
-      -webkit-mask-image: url("../images/play-off-mask.webp");
-      height: 360px !important;  
-      box-shadow: 0px 0px 52px 0px #895A8880 inset;
+
+    .over-img {
+      position: absolute;
+      border-radius: 24px;
+      bottom: 3%;
+    }
+
+    .over-img-1 {
+      left: 0;
+      transform: translate(0px, 0%);
+    }
+    .over-img-2 {
+      right: 0;
+      transform: translate(0px, 0%);
+    }
+
+    .layer-content {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+    }
+
+    h2 {
+      font-family: var(--font-ceviche);
+      font-weight: var(--fw-400);
+      font-size: 50px;
+      line-height: 0.9;
+      color: var(--white);
+      margin-bottom: 12px;
+      text-shadow: 8px 4px 12px rgba(0, 0, 0, 0.46);
+    }
+
+    p {
+      font-family: var(--font-montserrat);
+      font-weight: var(--fw-400);
+      font-size: var(--fs-20);
+      line-height: 1.4;
+      color: var(--white);
+    }
+    .layer-content-1 {
+      max-width: 380px;
+
+      right: 0;
+      transform: translate(-20px, -50%);
+    }
+    .layer-content-2 {
+      max-width: 390px;
+      text-align: end;
+      right: 50%;
+      transform: translate(15%, -50%);
+
+      .btn-pink-wrapper {
+        text-align: start;
+        transform: scaleX(-1);
+        .btn-pink {
+          .text {
+            transform: scaleX(-1);
+          }
+        }
+        &:active {
+          transform: translateY(1em) scale(0.9) scaleX(-1) !important;
+        }
+      }
+    }
+  }
+
+  .btn-pink-wrapper {
+    & .btn-pink {
+      max-width: 160px;
+      .text {
+        font-size: var(--fs-20);
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .refer {
+    padding: 180px 30px 0 30px;
+
+    & .boxes {
+      .over-img {
+        max-width: 350px;
+      }
+    }
+    & .btn-pink-wrapper {
+      & .btn-pink {
+        max-width: 130px;
+        .text {
+          font-size: var(--fs-16);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1480px) {
+  .refer {
+    & .boxes {
+      .over-img {
+        max-width: 320px;
+      }
+      .layer-content {
+        max-width: calc(100% - 320px);
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+      p {
+        font-size: var(--fs-16);
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1280px) {
+  .refer {
+    & .boxes {
+      .over-img {
+        max-width: 280px;
+      }
+      .layer-content {
+        max-width: calc(100% - 280px);
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+      p {
+        font-size: var(--fs-16);
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1119px) {
+  .refer {
+    & .boxes {
+      .over-img {
+        max-width: 240px;
+      }
+      .layer-content {
+        max-width: calc(100% - 240px);
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        font-size: var(--fs-14);
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .refer {
+    .row {
+      row-gap: 60px;
+    }
+
+    & .boxes {
+      .over-img {
+        max-width: 380px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .refer {
+    .row {
+      row-gap: 40px;
+    }
+
+    & .boxes {
+      .over-img {
+        max-width: 280px;
+      }
+
+      .layer-content {
+        max-width: calc(100% - 280px);
+      }
+      .layer-content-2 {
+        transform: translate(10%, -50%);
+      }
+
+      h2 {
+        font-size: 38px;
+      }
+      p {
+        font-size: var(--fs-14);
+      }
+    }
+  }
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  .refer {
+    & .boxes {
+      .layer-content-2 {
+        transform: translate(25%, -50%) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1480px) {
+  .refer {
+    .row {
+      row-gap: 60px;
+    }
+    & .gamer-box {
+      .green-mask-button {
+        font-size: var(--fs-32);
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .popularGame_section {
+    padding: 40px 20px 40px 20px;
+  }
+  .refer {
+    padding: 80px 30px 0 30px;
+    & .gamer-box {
+      .green-mask-button {
+        font-size: var(--fs-20);
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .refer {
+    padding: 30px 0 0 0;
+    .row {
+      row-gap: 30px;
+    }
+
+    & .boxes {
+      .over-img {
+        max-width: 150px;
+      }
+      .layer-content {
+        width: calc(100% - 150px);
+      }
+      .layer-content-2 {
+        transform: translate(10%, -50%);
+        max-width: 280px;
+      }
+      h2 {
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+      p {
+        font-size: var(--fs-10);
+        margin-bottom: 6px;
+      }
+    }
+
+    & .gamer-box {
+      .green-mask-button {
+        width: 100%;
+        max-width: 130px;
+        aspect-ratio: 439 / 109;
+        font-size: 12px;
+      }
+    }
+    & .btn-pink-wrapper {
+      & .btn-pink {
+        max-width: 75px;
+        .text {
+          font-size: var(--fs-12);
+        }
+      }
     }
   }
 }

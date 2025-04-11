@@ -1,9 +1,13 @@
 .banner {
+  max-width:-webkit-fill-available;
   width: 100%;
   height: 850px;
+  overflow: hidden;
   background-image: url("../images/banner.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
-
+  z-index: 1;
   &::after {
     position: absolute;
     width: 100%;
@@ -16,6 +20,100 @@
       rgba(14, 14, 14, 0) 4.95%,
       #0e0e0e 100%
     );
+  }
+
+  .content {
+    max-width: 1560px;
+    margin: auto;
+    padding: 150px 0 0 0;
+  }
+
+  .left-section {
+    h1 {
+      transform: translateY(-40px);
+    }
+    img {
+      max-width: 750px;
+      width: 100%;
+    }
+    .left-box {
+      animation: upDownMove 4s ease-in-out infinite alternate;
+    }
+    .btn-pink-wrapper {
+      .btn-pink {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+    }
+  }
+
+  .right-section {
+    .slot {
+      position: relative;
+      animation: zoomInOut 4s ease-in-out infinite alternate;
+      transform-origin: bottom center;
+      &::after {
+        top: 0;
+        right: 50%;
+        position: absolute;
+        content: "";
+        width: 300px;
+        height: 300px;
+        transform: translate(50%, 0%);
+        border-radius: 50%;
+        background: rgba(40, 166, 243, 1);
+        filter: blur(50px);
+        z-index: -1;
+        animation: afterGlow 4s ease-in-out infinite;
+      }
+      img {
+        max-width: 530px;
+        width: 100%;
+      }
+    }
+    .bitcoin {
+      position: absolute;
+    }
+    .bitcoin-1 {
+      top: 25%;
+      right: 0%;
+      transform: translate(-50%, 100%);
+      filter: blur(2px);
+      width: 100px;
+      animation: bit1Rotate 4s linear infinite alternate;
+    }
+    .bitcoin-2 {
+      top: 0%;
+      right: 0%;
+      transform: translate(-50%, -50%);
+      width: 95px;
+      animation: bit2Rotate 4s linear infinite alternate;
+    }
+    .bitcoin-3 {
+      top: 0%;
+      left: 0%;
+      transform: translate(-50%, -50%);
+      width: 120px;
+      animation: bit2Rotate 4s linear infinite alternate;
+    }
+    .bitcoin-4 {
+      top: 30%;
+      left: 20%;
+      transform: translate(-100%, -50%);
+      filter: blur(1px);
+      width: 30px;
+      animation: bit3Rotate 4s linear infinite alternate;
+    }
+    .bitcoin-5 {
+      top: calc(100% - 150px);
+      left: 0%;
+      transform: translate(-50%, -50%);
+      width: 210px;
+      animation: bit3Rotate 4s linear infinite alternate;
+      filter: blur(2px);
+    }
   }
 }
 
@@ -31,6 +129,8 @@
 
   .down {
     position: absolute;
+    border: none;
+    outline: none;
     text-align: center;
     display: flex;
     align-items: center;
@@ -53,7 +153,204 @@
     img {
       width: 85px;
       height: 85px;
+      aspect-ratio: 1/1;
       rotate: 90deg;
+    }
+  }
+}
+
+/* ---- animations ------ */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes afterGlow {
+  0% {
+    filter: blur(30px);
+    background: rgba(40, 166, 243, 0.4);
+  }
+  50% {
+    filter: blur(60px);
+    background: rgba(40, 166, 243, 0.9);
+    width: 250px;
+    height: 250px;
+  }
+  100% {
+    filter: blur(30px);
+    background: rgba(40, 166, 243, 0.4);
+  }
+}
+
+@keyframes upDownMove {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-40px) scale(1.05);
+  }
+}
+
+@keyframes bit1Rotate {
+  0% {
+    transform: translate(-50%, 100%) rotate(0deg) translateY(-50px);
+  }
+  100% {
+    transform: translate(-50%, 100%) rotate(-30deg) translateY(0px);
+  }
+}
+@keyframes bit2Rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-50px);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-30deg) translateY(0px);
+  }
+}
+
+@keyframes bit3Rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-30px);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(30deg) translateY(0px);
+  }
+}
+
+/* ----- media query ----- */
+
+@media (max-width: 991px) {
+  .banner {
+    height: 570px;
+    .content {
+      padding: 120px 0 0 0;
+    }
+    & .left-section {
+      h1 {
+        transform: translateY(-25px);
+      }
+      img {
+        max-width: 348px;
+      }
+    }
+
+    & .right-section {
+      .slot {
+        > img {
+          max-width: 348px;
+        }
+      }
+      .bitcoin-1 {
+        width: 60px;
+      }
+      .bitcoin-2 {
+        width: 55px;
+      }
+      .bitcoin-3 {
+        width: 70px;
+      }
+      .bitcoin-4 {
+        width: 20px;
+      }
+
+      .bitcoin-5 {
+        width: 120px;
+      }
+    }
+    .btn-pink-wrapper {
+      & .btn-pink {
+        max-width: 150px;
+        .text {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .slider-wrapper {
+    padding: 20px 0;
+    & .down {
+      max-width: 150px;
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 900px;
+    .content {
+      padding: 80px 0 0 0;
+    }
+
+    & .btn-pink-wrapper {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .banner {
+    height: 720px;
+    .content {
+      padding: 60px 0 0 0;
+    }
+    & .left-section { 
+      img {
+        max-width: 280px;
+      }
+      h1 {
+        transform: translateY(-20px);
+      }
+    }
+
+    & .right-section {
+      & .slot {
+        > img {
+          max-width: 280px;
+        }
+      }
+      .bitcoin-1 {
+        width: 45px;
+      }
+      .bitcoin-2 {
+        width: 40px;
+      }
+      .bitcoin-3 {
+        width: 50px;
+      }
+      .bitcoin-4 {
+        width: 15px;
+      }
+      .bitcoin-5 {
+        width: 80px;
+      }
+    }
+
+    & .btn-pink-wrapper {
+      & .btn-pink {
+        max-width: 120px;
+        .text {
+          font-size: var(--fs-14);
+        }
+      }
+    }
+  }
+
+  .slider-wrapper {
+    padding: 15px 0;
+    & .down {
+      max-width: 100px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }

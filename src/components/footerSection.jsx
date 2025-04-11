@@ -13,12 +13,12 @@ export default function FooterSection() {
         <section className='footer'>
             <footer>
                 <Row className='content'>
-                    <Col md={4}>
+                    <Col lg={4} className='text-center text-lg-start'>
                         <img src={Logo} alt="Logo" className='logo' />
                         <p className='para para-2'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                     </Col>
-                    <Col md={8}>
-                        <Row className='link-box'>
+                    <Col lg={8}>
+                        <Row className='link-box text-center text-md-start'>
                             <Col md={4}>
                                 <h2 className='head-2'> Platform</h2>
 

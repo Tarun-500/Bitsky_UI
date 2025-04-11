@@ -20,8 +20,8 @@
   }
   .gamer-box {
     position: relative;
-    mask-image: url("../images/gamer-layer.png");
-    -webkit-mask-image: url("../images/gamer-layer.png");
+    mask-image: url("../images/gamer-layer.webp");
+    -webkit-mask-image: url("../images/gamer-layer.webp");
     mask-size: 100% 100%;
     -webkit-mask-size: 100% 100%;
     mask-repeat: no-repeat;

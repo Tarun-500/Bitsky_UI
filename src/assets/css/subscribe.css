@@ -28,12 +28,13 @@
   }
 
   .subscribe-box-1 {
-    mask-image: url("../images/subscribe-1.png");
-    -webkit-mask-image: url("../images/subscribe-1.png");
+    mask-image: url("../images/subscribe-1.webp");
+    -webkit-mask-image: url("../images/subscribe-1.webp");
   }
+
   .subscribe-box-2 {
-    mask-image: url("../images/subscribe-2.png");
-    -webkit-mask-image: url("../images/subscribe-2.png");
+    mask-image: url("../images/subscribe-2.webp");
+    -webkit-mask-image: url("../images/subscribe-2.webp");
   }
 
   .subscribe-text {
@@ -120,7 +121,34 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) and (max-width: 1220px) {
+  .subscribe_section {
+    .subscribe-text {
+      max-width: 60%;
+
+      .input {
+        margin-bottom: 10px;
+      }
+      input {
+        height: 38px;
+        font-size: var(--fs-14);
+      }
+      h2{
+        font-size: var(--fs-34);
+      }
+      p {
+        font-size: var(--fs-14);
+        margin-bottom: 10px;
+      }
+      & .btn-pink-wrapper {
+        .btn-pink {
+          max-width: 130px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
   .subscribe_section {
     .subscribe-box {
       margin: auto;
@@ -132,7 +160,7 @@
   }
 }
 
-@media (max-width: 76px) {
+@media (max-width: 768px) {
   .subscribe_section {
     & .subscribe-text {
       max-width: 60%;
@@ -176,7 +204,8 @@
         margin-bottom: 10px;
       }
       input {
-        max-width: 260px;
+        max-width: 260px; 
+        font-size: var(--fs-12);
       }
     }
   }

@@ -1,6 +1,6 @@
 import { Col, Row } from 'reactstrap'
 import '../assets/css/socialMedia.css'
-import Banner from '../assets/images/social-mask-main.png'
+import Banner from '../assets/images/social-mask-main.webp'
 import Youtube from '../assets/images/icons/youtube.png'
 import Instagram from '../assets/images/icons/instagram.png'
 import Twitch from '../assets/images/icons/twitch.png'

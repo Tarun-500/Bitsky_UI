@@ -6,7 +6,7 @@ import Boy from '../assets/images/refer-boy.png'
 import Girl from '../assets/images/refer-girl.png'
 import Layer1 from '../assets/images/refer-box-1.png'
 import Layer2 from '../assets/images/refer-box-2.png'
-import GamerLayer from '../assets/images/gamer-layer.png'
+import GamerLayer from '../assets/images/gamer-layer.webp'
 export default function ReferSection() {
   return (
     <section className="refer">

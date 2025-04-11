@@ -1,7 +1,7 @@
 import { Col, Row } from 'reactstrap'
 import '../assets/css/subscribe.css'
-import ImgOne from '../assets/images/subscribe-1.png'
-import ImgTwo from '../assets/images/subscribe-2.png'
+import ImgOne from '../assets/images/subscribe-1.webp'
+import ImgTwo from '../assets/images/subscribe-2.webp'
 import Email from "../assets/images/email.svg"
 export default function SubscribeSection() {
   return (

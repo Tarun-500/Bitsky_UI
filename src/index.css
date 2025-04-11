@@ -305,9 +305,14 @@ body {
 }
 
 
+@media (max-width: 1600px) {
+  .head-1 {
+    font-size: 140px;
+  }
+}
 @media (max-width: 1480px) {
   .head-1{
-    font-size: 150px;
+    font-size: 130px;
   }
   .head-4{
     font-size: var(--fs-32);
@@ -321,7 +326,7 @@ body {
 }
 @media (max-width: 991px) {
   .head-1{
-    font-size: 90px;
+    font-size: 80px;
   }
   .head-3{
     font-size: var(--fs-28);
@@ -349,7 +354,7 @@ body {
 
 @media (max-width: 576px) {
   .head-1{
-    font-size: 70px;
+    font-size: 60px;
   }
   .head-3{
     font-size: var(--fs-22);

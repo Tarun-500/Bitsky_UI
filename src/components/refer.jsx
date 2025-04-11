@@ -4,14 +4,12 @@ import Gamer from '../assets/images/gamer-1.png'
 import Gamer2 from '../assets/images/gamer-2.png'
 import Boy from '../assets/images/refer-boy.png'
 import Girl from '../assets/images/refer-girl.png'
-import Layer1 from '../assets/images/refer-box-1.png'
-import Layer2 from '../assets/images/refer-box-2.png'
+import Layer1 from '../assets/images/refer-box-1.webp'
+import Layer2 from '../assets/images/refer-box-2.webp'
 import GamerLayer from '../assets/images/gamer-layer.webp'
 export default function ReferSection() {
   return (
     <section className="refer">
-
-
       <Row className='mx-0'>
         <Col lg={6}>
           <div className='boxes'>

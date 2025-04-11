@@ -79,7 +79,7 @@
     .bitcoin-1 {
       top: 25%;
       right: 0%;
-      transform: translate(-50%, 100%);
+      transform: translate(0%, 100%);
       filter: blur(2px);
       width: 100px;
       animation: bit1Rotate 4s linear infinite alternate;
@@ -87,14 +87,14 @@
     .bitcoin-2 {
       top: 0%;
       right: 0%;
-      transform: translate(-50%, -50%);
+      transform: translate(0%, -50%);
       width: 95px;
       animation: bit2Rotate 4s linear infinite alternate;
     }
     .bitcoin-3 {
       top: 0%;
       left: 0%;
-      transform: translate(-50%, -50%);
+      transform: translate(0%, -50%);
       width: 120px;
       animation: bit2Rotate 4s linear infinite alternate;
     }
@@ -197,18 +197,18 @@
 
 @keyframes bit1Rotate {
   0% {
-    transform: translate(-50%, 100%) rotate(0deg) translateY(-50px);
+    transform: translate(0%, 100%) rotate(0deg) translateY(-50px);
   }
   100% {
-    transform: translate(-50%, 100%) rotate(-30deg) translateY(0px);
+    transform: translate(0%, 100%) rotate(-30deg) translateY(0px);
   }
 }
 @keyframes bit2Rotate {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-50px);
+    transform: translate(0%, -50%) rotate(0deg) translateY(-50px);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(-30deg) translateY(0px);
+    transform: translate(0%, -50%) rotate(-30deg) translateY(0px);
   }
 }
 

@@ -65,9 +65,18 @@ export default function MyAccount() {
             <Container>
                 <Row className="tabs-box">
                     <Col>
+                        {/* <Tabs value={tabIndex} onChange={(e, val) => setTabIndex(val)}>
+                            {tabTitles.map((title, idx) => (
+                                <Tab key={idx} label={title}  />
+                            ))}
+                        </Tabs> */}
                         <Tabs value={tabIndex} onChange={(e, val) => setTabIndex(val)}>
                             {tabTitles.map((title, idx) => (
-                                <Tab key={idx} label={title} />
+                                <Tab
+                                    key={idx}
+                                    label={title}
+                                    className={tabIndex === idx ? 'custom-tab selected-tab' : 'custom-tab'}
+                                />
                             ))}
                         </Tabs>
                     </Col>
@@ -196,7 +205,7 @@ export default function MyAccount() {
                         </svg>
 
                         <h3 className='head-6'>
-                            {formik.values.firstName || 'First Name'} <span>{formik.values.lastName || 'Last Name'}</span>
+                            {formik.values.firstName || 'First'} <span>{formik.values.lastName || 'Last'}</span>
                         </h3>
                         <p className='para'>{formik.values.username || 'Username'}</p>
                     </Col>
@@ -204,25 +213,33 @@ export default function MyAccount() {
                     <Col md={7} className="form-box-right">
                         {tabIndex === 0 && (
                             <form onSubmit={formik.handleSubmit}>
-                                <Row>
-                                    {['firstName', 'lastName', 'username', 'dob', 'email', 'phone'].map((field,) => (
+                                <Row>{['firstName', 'lastName', 'username', 'dob', 'email', 'phone'].map((field) => {
+                                    const isEmpty = !formik.values[field]; // Check if value is empty
+
+                                    return (
                                         <Col
                                             key={field}
                                             md={6}
                                             className={`input px-10 input-${field} ${getActiveClass(field)}`}
-                                        // ${field.includes('last') || field === 'dob' || field === 'phone' ? 'ps-md-0' : 'pe-md-0'}
                                         >
                                             <input
-                                                type={field === 'dob' ? 'date' : field === 'email' ? 'email' : 'text'}
+                                                type={
+                                                    field === 'dob'
+                                                        ? 'date'
+                                                        : field === 'email'
+                                                            ? 'email'
+                                                            : 'text'
+                                                }
                                                 name={field}
                                                 placeholder={
                                                     field === 'dob'
                                                         ? ''
                                                         : field
                                                             .replace(/([A-Z])/g, ' $1')
-                                                            .replace(/^./, str => str.toUpperCase())
+                                                            .replace(/^./, (str) => str.toUpperCase())
                                                 }
                                                 ref={inputRefs[field]}
+                                                className={isEmpty ? 'empty' : 'filled'}
                                                 value={formik.values[field]}
                                                 onChange={formik.handleChange}
                                                 onFocus={() => setFocused(field)}
@@ -231,16 +248,18 @@ export default function MyAccount() {
                                                     setFocused(false);
                                                 }}
                                             />
+
                                             {formik.touched[field] && formik.errors[field] && (
                                                 <span className="error-message">{formik.errors[field]}</span>
                                             )}
 
-                                            <div className='circle'>
-                                                <div className='dot'></div>
+                                            <div className="circle">
+                                                <div className="dot"></div>
                                             </div>
-
                                         </Col>
-                                    ))}
+                                    );
+                                })}
+
                                 </Row>
 
                                 <div className="btn-pink-wrapper">

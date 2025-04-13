@@ -41,6 +41,7 @@
   --color-skyblue-2: #03a9f4;
   --color-purple: #5046af;
   --color-maroon: #654900;
+  --color-grey: #3f3f3f;
   --btn-color: #4b024a;
   --liner-bg-1: linear-gradient(180deg, #6ef4c4 0%, #009289 92.59%);
   --radial-bg: radial-gradient(
@@ -373,4 +374,15 @@ body {
     font-size: var(--fs-28);
     line-height: 1;
   }
+}
+
+
+/* ------------ */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  transition: background-color 9999s ease-in-out 0s;
+  color: var(--white) !important;
+    -webkit-text-fill-color: var(--white) !important; 
 }

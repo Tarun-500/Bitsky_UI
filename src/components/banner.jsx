@@ -6,7 +6,9 @@ import SlotMachine from '../assets/images/slot-machine.png'
 import Bitcoin1 from '../assets/images/bitcoin-1.png'
 import Bitcoin2 from '../assets/images/bitcoin-2.png'
 import Bitcoin3 from '../assets/images/bitcoin-3.png'
+import { useNavigate  } from 'react-router-dom'
 export default function Banner() {
+    const navigate   = useNavigate ()
     return (
         <section className='banner_section'>
             <Row className='mx-0'>
@@ -19,7 +21,7 @@ export default function Banner() {
                             </div>
                             <div className='btn-pink-wrapper'>
                                 <div className='btn-pink-box'>
-                                    <button className='btn-pink' type='button'>
+                                    <button className='btn-pink' type='button' onClick={()=>navigate('/myAccount')}>
                                     <div className="btn-content"><span className="text">Play Now</span></div>
                                     </button>
                                 </div>

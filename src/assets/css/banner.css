@@ -254,6 +254,10 @@
         width: 150px;
       }
     }
+    &::after { 
+      height: 150px;
+      top: calc(100% - 150px); 
+  }
   }
 }
 @media (max-width: 991px) {
@@ -298,7 +302,7 @@
       & .btn-pink {
         max-width: 150px;
         .text {
-          font-size: 24px;
+          font-size: 24px; 
         }
       }
     }

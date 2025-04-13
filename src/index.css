@@ -97,6 +97,10 @@ a {
   text-decoration: none !important;
 }
 
+.px-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
 .para {
   font-family: var(--font-montserrat);
   font-weight: var(--fw-600);
@@ -164,8 +168,15 @@ a {
   line-height: 0.9;
 }
 
+.head-6 {
+  font-family: var(--font-montserrat);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-24);
+  line-height: 1.4;
+}
+
 body {
-  background: var(--bg-dark) !important; 
+  background: var(--bg-dark) !important;
 }
 
 .bg-banner {
@@ -214,11 +225,11 @@ body {
   font-weight: var(--fw-400);
   line-height: 1;
   color: var(--color-green);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
-  &:hover{
-    filter: drop-shadow(-0.1em 0.1em .5em var(--color-green));
-    -webkit-filter: drop-shadow(-0.1em 0.1em .5em var(--color-green));
+  &:hover {
+    filter: drop-shadow(-0.1em 0.1em 0.5em var(--color-green));
+    -webkit-filter: drop-shadow(-0.1em 0.1em 0.5em var(--color-green));
   }
 }
 
@@ -304,35 +315,34 @@ body {
   }
 }
 
-
 @media (max-width: 1600px) {
   .head-1 {
     font-size: 140px;
   }
 }
 @media (max-width: 1480px) {
-  .head-1{
+  .head-1 {
     font-size: 130px;
   }
-  .head-4{
+  .head-4 {
     font-size: var(--fs-32);
   }
 }
 
 @media (max-width: 1220px) {
-  .head-4{
+  .head-4 {
     font-size: var(--fs-28);
   }
 }
 @media (max-width: 991px) {
-  .head-1{
+  .head-1 {
     font-size: 80px;
   }
-  .head-3{
+  .head-3 {
     font-size: var(--fs-28);
   }
 
-  .head-4{
+  .head-4 {
     font-size: var(--fs-20);
   }
 
@@ -343,7 +353,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .head-4{
+  .head-4 {
     font-size: var(--fs-18);
   }
   .head-5 {
@@ -353,10 +363,10 @@ body {
 }
 
 @media (max-width: 576px) {
-  .head-1{
+  .head-1 {
     font-size: 60px;
   }
-  .head-3{
+  .head-3 {
     font-size: var(--fs-22);
   }
   .head-5 {

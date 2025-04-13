@@ -1,0 +1,294 @@
+.myAccount_section {
+  padding-bottom: 60px;
+  .head-1 {
+    font-size: 40px !important;
+    text-shadow: 2.9px 2.9px 0px 0px rgba(0, 18, 80, 0.25);
+    border: 1.45px solid;
+    border-image-source: linear-gradient(180deg, #d200dc 0%, #87009e 100%);
+  }
+
+  .form-box {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    background: #1b1b1b;
+    padding: 60px 24px 24px 24px;
+    position: relative;
+
+    .head-2 {
+      position: absolute;
+      top: 0%;
+      right: 50%;
+      transform: translate(50%, 8px);
+      color: var(--bg-dark);
+    }
+
+    .icon {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+
+      &.left-icon {
+        left: 0;
+        transform: translate(-4px, -4px);
+      }
+
+      &.right-icon {
+        right: 0;
+        transform: translate(4px, -4px);
+      }
+
+      &.display-box {
+        width: 60%;
+        max-width: 400px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 1.75em;
+      height: 2em;
+      background: var(--white);
+    }
+    &::after {
+      clip-path: polygon(97% 0%, 0% 100%, 97% 100%);
+      right: 0;
+      transform: translate(25%, 25%);
+    }
+    &::before {
+      left: 0;
+      clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+      transform: translate(-25%, 25%);
+    }
+  }
+
+  .form-box-right {
+    margin-top: 60px;
+
+    .input {
+      position: relative;
+      margin-bottom: 50px;
+
+      input {
+        width: 100%;
+        height: 48px;
+        background: transparent;
+        border: 0px solid transparent;
+        outline: 0;
+        color: var(--white);
+        padding: 16px 24px 16px 50px;
+        font-family: var(--font-montserrat);
+        font-weight: var(--fw-600);
+        font-size: var(--fs-16);
+        line-height: 1.4;
+
+        &.error {
+          border-color: var(--red);
+        }
+
+        &::placeholder {
+          color: var(--white);
+          opacity: 0.5;
+        }
+      }
+
+      &:nth-of-type(odd)::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        content: "";
+        width: 2px;
+        height: 53px;
+        background: #3f3f3f;
+        transform: translate(calc(-50% + 2px), -50%) rotate(30deg);
+        z-index: 99;
+      }
+
+      &:nth-of-type(even) input {
+        border-top: 2px solid;
+        border-image-source: linear-gradient(90deg, #3f3f3f 0%, #3f3f3f 56.45%);
+        border-image-slice: 1;
+      }
+
+      &:nth-of-type(odd) input {
+        border-bottom: 2px solid;
+        border-image-source: linear-gradient(90deg, #3f3f3f 0%, #3f3f3f 56.45%);
+        border-image-slice: 1;
+      }
+
+      .circle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 2px solid #3f3f3f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #3f3f3f;
+          transition: background-color 0.3s ease;
+        }
+      }
+
+      &:nth-of-type(odd) .circle {
+        left: 0;
+        bottom: -20%;
+        transform: translate(0%, 0%);
+      }
+
+      &:nth-of-type(even) .circle {
+        right: 0;
+        top: -20%;
+        transform: translate(-25%, 0%);
+      }
+
+      &:nth-of-type(even):hover input,
+      &:nth-of-type(even):focus-within input,
+      &.active:nth-of-type(even) input {
+        border-image-source: linear-gradient(
+          90deg,
+          #3f3f3f 0%,
+          var(--primary-color) 56.45%
+        );
+      }
+
+      &:nth-of-type(odd):hover input,
+      &:nth-of-type(odd):focus-within input,
+      &.active:nth-of-type(odd) input {
+        border-image-source: linear-gradient(
+          90deg,
+          var(--primary-color) 0%,
+          #3f3f3f 56.45%
+        );
+      }
+
+      &:hover .circle,
+      &:focus-within .circle,
+      &.active .circle {
+        border-color: var(--white);
+      }
+
+      &:hover .circle .dot,
+      &:focus-within .circle .dot,
+      &.active .circle .dot {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  .btn-pink-wrapper {
+    text-align: end;
+    .btn-pink {
+      transform: scaleX(-1);
+      max-width: 150px;
+      .text {
+        transform: scaleX(-1);
+        font-size: var(--fs-20);
+      }
+    }
+  }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.error-message {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 60px;
+  color: var(--color-red);
+  font-size: var(--fs-12);
+}
+
+.tabs-box {
+  margin-bottom: 60px;
+
+  button {
+    font-family: var(--font-ceviche);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-24);
+    line-height: 1.4;
+    color: var(--white);
+    flex: 1;
+    position: relative;
+    &:nth-of-type(odd) {
+      border-top: 2px dashed #3f3f3f;
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        background: var(--white);
+        transform-origin: bottom;
+        top: 0;
+      }
+
+      &::after {
+        right: 0;
+        width: 3px;
+        height: 100%;
+        transform: translate(0%, 0%) rotate(-15deg);
+      }
+
+      &::before {
+        left: 0;
+        width: 3px;
+        height: 100%;
+        transform: translate(0%, 0%) rotate(15deg);
+      }
+    }
+
+    &:nth-of-type(even) {
+      border-bottom: 2px dashed #3f3f3f;
+    }
+  }
+
+  .Mui-selected {
+    background: linear-gradient(
+      178.29deg,
+      var(--primary-color) 1.55%,
+      rgba(255, 0, 238, 0) 98.66%
+    );
+    color: var(--white) !important;
+  }
+  .MuiTabs-indicator {
+    height: 0;
+  }
+}
+
+.animated-icon {
+  text-align: center;
+  svg {
+    width: 80% !important;
+    max-width: 350px !important;
+    height: auto; 
+  }
+
+  .head-6 {
+    color: var(--white);
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+  
+  .para { 
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: .3em;
+    color: var(--primary-color);
+  }
+}

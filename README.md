@@ -20,7 +20,7 @@
 
 
 ## MY Account Form Desing in 1920px only for desktop view  (not responsive) - 
-### I have added a functionality where, if the user enters data, it will be shown in an alert popup. Also, if the user enters incorrect data, I have implemented validation using Yup with Formik.
+### I have added a functionality where, if the user enters data, it will be shown in an alert popup. Also, if the user enters incorrect data, I have implemented validation using Yup with Formik. all tabs and input fields are working seamless.
 
 
 ![image](https://github.com/user-attachments/assets/b5b8f015-0c03-49ce-8113-bc3f3c866e01)

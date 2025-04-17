@@ -245,7 +245,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 1.4;
     color: var(--white);
     flex: 1;
-    position: relative; 
+    position: relative;
 
     &:nth-of-type(odd) {
       border-top: 2px dashed var(--color-grey);
@@ -294,12 +294,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
   }
   .MuiTabs-indicator {
-    height: 0; 
+    height: 0;
 
     &::before,
-    &::after{
-     content: "";
-     position: absolute;
+    &::after {
+      content: "";
+      position: absolute;
     }
     &::before {
       content: "";
@@ -312,7 +312,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       background: var(--bg-dark);
       clip-path: polygon(100% 0%, 0% 0%, 0% 100%);
     }
-     &::after{
+    &::after {
       bottom: 0%;
       left: 100%;
       transform: translateX(-100%) rotate(-180deg);
@@ -322,51 +322,39 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       border-right: 16px solid transparent;
       border-bottom: 60px solid var(--bg-dark);
       z-index: 100;
-     }
+    }
   }
 
   .MuiTouchRipple-root {
-   position: relative;
-   &::before,
-   &::after{
-    content: "";
-    position: absolute;
-   }
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
 
-   /* &::after{
-    bottom: 0%;
-    left: 8px;
-    transform: translateX(-50%) rotate(-180deg);
-    width: 0;
-    height: 0;
-    border-left: 16px solid transparent;
-    border-right: 0px solid transparent;
-    border-bottom: 60px solid rgb(67, 67, 67);
-    z-index: 96;
-   } */
-
-   &::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 60px;
-    background: var(--primary-color);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-   &::before{
-    bottom: 0%;
-    right: -28px;
-    transform: translateX(-100%) rotate(-180deg);
-    width: 0;
-    height: 0;
-    border-left: 0px solid transparent;
-    border-right: 28px solid transparent;
-    border-bottom: 60px solid red;
-    z-index: 100;
-   }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 60px;
+      background: var(--primary-color);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    &::before {
+      bottom: 0%;
+      right: -28px;
+      transform: translateX(-100%) rotate(-180deg);
+      width: 0;
+      height: 0;
+      border-left: 0px solid transparent;
+      border-right: 28px solid transparent;
+      border-bottom: 60px solid red;
+      z-index: 100;
+    }
   }
 }
 
@@ -391,5 +379,57 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 1.4;
     letter-spacing: 0.3em;
     color: var(--primary-color);
+  }
+}
+
+@media (max-width: 991px) {
+  .tabs-box {
+    & button {
+      font-size: var(--fs-18);
+    }
+  }
+}
+@media (max-width: 767px) {
+  .tabs-box {
+    & button {
+      font-size: var(--fs-16);
+    }
+
+    & .MuiTabs-indicator {
+      &::after {
+        border-bottom: 70px solid var(--bg-dark);
+      }
+      &::before {
+        height: 70px;
+      }
+    }
+  }
+
+  .myAccount_section {
+    & .form-box-right {
+      & .input {
+        &:nth-of-type(even) .circle {
+           top: calc(100% - 10px);
+        }
+
+        &:nth-of-type(even) input {
+          border-top: 0;
+          border-bottom: 2px solid;
+        }
+
+        &:nth-of-type(odd)::after {
+          position: inherit;
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .tabs-box {
+    & button {
+      font-size: var(--fs-14);
+    }
   }
 }
